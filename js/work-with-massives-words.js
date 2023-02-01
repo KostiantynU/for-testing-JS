@@ -186,3 +186,34 @@
 // // Here slug by ONE row of code:
 // const slug2 = title.toLowerCase().split(' ').join('-');
 // console.log('Here SLUG by one row of code: ', slug2);
+
+// ----------
+// ---------- Interesting task - to find biggest word by length?
+// function findLongestWord(string) {
+//   // Change code below this line
+//   let letters = string.split(' '); // Here i make massive, for work with him by massive, and items, .methods (length)
+//   console.log('Look at massive: ', letters); // Check what i  get
+//   let leng = 0; // For starting number fo compare length, maybe usefull, can use length of first element
+//   console.log('Length of zero index: ', leng); // I dont know for what this ;-)
+//   let biggest = ''; // Making null string, because must return string
+//   let temporary = letters[0].length; // Here is start of count
+//   for (let i = 0; i < letters.length; i += 1) {
+//     leng = letters[i].length; // Usefull variable, but use as a count (length of random Item)
+//     console.log('Length of item: ', letters[i], ' ', leng); // Check length what i get
+//     if (temporary <= leng) {
+//       // Here i fight with right desicion
+//       biggest = letters[i]; // Here i pass the variable of longest item, by 'indexOf'
+//       temporary = letters[i].length; // Here i change temporary variable because i get new, longer, length
+//       console.log('Temporary length: ', temporary);
+//       console.log('This is it?: ', biggest);
+//     }
+//     console.log('The biggest is: ', biggest);
+//   }
+//   return biggest;
+// }
+
+// // Change code above this line
+
+// console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
+// console.log(findLongestWord('Google do a roll'));
+// console.log(findLongestWord('May the force be with you'));
