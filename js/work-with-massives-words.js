@@ -217,3 +217,17 @@
 // console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
 // console.log(findLongestWord('Google do a roll'));
 // console.log(findLongestWord('May the force be with you'));
+
+// ---------- Task 26/32 ---------
+// Інструкція for...of оголошує цикл, який перебирає ітерабельні об'єкти, такі як масиви та рядки. Тіло циклу буде виконуватися для значення кожного елемента. Це хороша заміна циклу for, якщо не потрібен доступ до лічильника ітерації.
+
+// for (const variable of iterable) {
+//   // тіло цикла
+// }
+// variable - змінна, яка буде зберігати значення елемента на кожній ітерації
+// iterable - колекція, яка містить ітерабельні елементи, наприклад масив
+// const planets = ["Earth", "Mars", "Venus"];
+
+// for (const planet of planets) {
+//   console.log(planet);
+// }
