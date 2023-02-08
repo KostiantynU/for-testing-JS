@@ -95,3 +95,28 @@
 
 // // const bookPrice = book.price;
 // console.log(book.price); // undefined
+
+// ---------- Taking keys and values in empty arrays;
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// // Empty array for futures values;
+// const values = [];
+// // Change code below this line
+// // This is array with only KEYs of object apartment;
+// const keys = Object.keys(apartment);
+// console.log('this is array:', keys);
+// // This is array with VALUES of KEYs of object apartment;
+// const apart = Object.keys(apartment);
+// console.log('here is apart:', apart);
+// for (const key of apart) {
+//   if (apartment.hasOwnProperty(key)) {
+//     console.log('look in key', key);
+//     // keys.push(key);
+//     values.push(apartment[key]);
+//   }
+// }
+// console.log('array values:', values);
+// console.log('must be array with key:', keys);
