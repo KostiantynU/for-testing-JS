@@ -82,3 +82,90 @@
 // }
 // console.log('Here looking in HEX: ', hexColors);
 // console.log('Here is rgbColors: ', rgbColors);
+
+// ---------- 03:18 find a product.price by product.name
+// I don't know why, but 'return' is not working - not show me in console.log product.price.
+// But this taks is done successfull;
+
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   // Change code below this line
+//   console.log('in fn', productName);
+//   for (const product of products) {
+//     console.log('in cycle', product.name);
+//     if (product.name === productName) {
+//       console.log(product.price);
+//       return product.price;
+//     }
+//   }
+//   return null;
+
+//   // Change code above this line
+// }
+// getProductPrice('Radar');
+// getProductPrice('Grip');
+// getProductPrice('Scanner');
+// getProductPrice('Droid');
+// getProductPrice('Engine');
+
+// ---------- 03:19 Need to get values by name of KEY of object ---------
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   const array = [];
+//   // console.log(propName);
+//   for (const property of products) {
+//     const tempArray = Object.keys(property);
+//     // console.log('in FN', tempArray);
+//     // console.log('true?', tempArray.includes(propName));
+//     if (tempArray.includes(propName)) {
+//       array.push(property[propName]);
+//       // console.log('in IF', property[propName]);
+//       // console.log('MyArray', array);
+//     }
+//     // else {
+//     //   return array;
+//     // }
+//   }
+//   return array;
+//   // Change code above this line
+// }
+// console.log(getAllPropValues('name'));
+// console.log(getAllPropValues('quantity'));
+// console.log(getAllPropValues('price'));
+// console.log(getAllPropValues('category'));
+
+// ----------03:21 At least multiply price * quantity, by destruction
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+//   let totalPrice = 0;
+//   for (const { name, price, quantity } of products) {
+//     if (name === productName) {
+//       return (totalPrice = price * quantity);
+//     }
+//   }
+//   return totalPrice;
+//   // Change code above this line
+// }
+// console.log(calculateTotalPrice('Blaster'));
+// console.log(calculateTotalPrice('Radar'));
+// console.log(calculateTotalPrice('Droid'));

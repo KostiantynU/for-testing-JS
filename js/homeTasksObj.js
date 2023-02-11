@@ -1,24 +1,15 @@
-const products = [
-  { name: 'Radar', price: 1300, quantity: 4 },
-  { name: 'Scanner', price: 2700, quantity: 3 },
-  { name: 'Droid', price: 400, quantity: 7 },
-  { name: 'Grip', price: 1200, quantity: 9 },
-];
-
-function getProductPrice(productName) {
-  // Change code below this line
-  console.log('in fn', productName);
-  for (const product of products) {
-    console.log('in cycel', product.name);
-    if (product.name === productName) {
-      console.log('this is true');
-    }
-  }
-  return null;
+// Change code below this line
+function calculateMeanTemperature(forecast) {
+  const {
+    today: { low: todayLow, high: todayHigh },
+    tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+  } = forecast;
   // Change code above this line
+  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 }
-getProductPrice('Radar');
-getProductPrice('Grip');
-getProductPrice('Scanner');
-getProductPrice('Droid');
-getProductPrice('Engine');
+console.log(
+  calculateMeanTemperature({ today: { low: 28, high: 32 }, tomorrow: { low: 25, high: 29 } })
+);
+console.log(
+  calculateMeanTemperature({ today: { low: 37, high: 40 }, tomorrow: { low: 33, high: 38 } })
+);
