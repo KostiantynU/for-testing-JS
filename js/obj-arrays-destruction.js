@@ -30,3 +30,51 @@
 // };
 // console.log(bookShelf.updateBook('Haze', 'Dungeon chronicles'));
 // console.log(bookShelf.updateBook('The last kingdom', 'Dune'));
+
+// --------- 03:41 Very interesting task, like a task from Repeta with basket of goods:
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (const nam of this.potions) {
+//       if (nam.name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       }
+//     }
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     for (const nam of this.potions) {
+//       const potionIndex = this.potions.indexOf(nam);
+//       if (nam.name === potionName) {
+//         this.potions.splice(potionIndex, 1);
+//       }
+//     }
+//     return this.potions;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (const names of this.potions) {
+//       if (names.name === oldName) {
+//         names.name = newName;
+//       }
+//     }
+//     return this.potions;
+//   },
+//   // Change code above this line
+// };
+// // console.log(atTheOldToad.getPotions());
+// // console.log(atTheOldToad.addPotion({ name: 'Invisibility', price: 620 }));
+// // console.log(atTheOldToad.addPotion({ name: 'Invisibility', price: 620 }));
+// // console.log(atTheOldToad.addPotion({ name: "Dragon breath", price: 700 }));
+// // повертає рядок "Error! Potion Dragon breath is already in your inventory!"
+// // console.log(atTheOldToad.removePotion('Dragon breath'));
+// // console.log(atTheOldToad.removePotion('Speed potion'));
+// console.log(atTheOldToad.updatePotionName('Dragon breath', 'Polymorth'));
+// console.log(atTheOldToad.updatePotionName('Stone skin', 'Invulnerability potion'));
