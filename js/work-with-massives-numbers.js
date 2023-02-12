@@ -153,7 +153,7 @@
 // console.log(createArrayOfNumbers(1, 3));
 // console.log(createArrayOfNumbers(14, 17));
 
-// ---------- Example 23/32, it's wants that i make new array from numbers, what bigger then value
+// ---------- Example 02:23/32, it's wants that i make new array from numbers, what bigger then value
 // function filterArray(numbers, value) {
 //    let totalArr = [];
 //    for (const number of numbers) {
@@ -164,7 +164,7 @@
 //   return totalArr;
 // }
 
-// ---------- Example 25/32, it was haaard, hard to fine two equale numbers in two different arrays
+// ---------- Example 02:25/32, it was haaard, hard to fine two equale numbers in two different arrays
 // function getCommonElements(array1, array2) {
 //   // Change code below this line
 //   let totalArr = [];
