@@ -24,14 +24,45 @@
 // const bookByAuthor = books.find(book => book.author === AUTHOR);
 // console.log(bookWithTitle);
 // console.log(bookByAuthor);
-const colorPickerOptions = [
-  { label: "red", color: "#F44336" },
-  { label: "green", color: "#4CAF50" },
-  { label: "blue", color: "#2196F3" },
-  { label: "pink", color: "#E91E63" },
-  { label: "indigo", color: "#3F51B5" },
+const tweets = [
+  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+  { id: '001', likes: 2, tags: ['html', 'css'] },
+  { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+  { id: '003', likes: 8, tags: ['css', 'react'] },
+  { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
 ];
+// const totalLikes = tweets.reduce((likes, tweet) => {
+//   return (likes += tweet.likes);
+// }, 0);
+// console.log('TotalLikes:', totalLikes);
+// const avarageTotal = totalLikes / tweets.length;
+// console.log('Avarage likes:', avarageTotal);
 
-console.log(colorPickerOptions.findIndex(option => option.label === "blue"));
-console.log(colorPickerOptions.findIndex(option => option.label === "pink"))
-console.log(colorPickerOptions.findIndex(option => option.label === "white"));
+const countLikes = tweets => {
+  return tweets.reduce((totalLikes, tweet) => (totalLikes += tweet.likes), 0);
+};
+console.log(countLikes(tweets));
+// const tags = tweets.reduce((allTags, tweet) => {
+//   allTags.push(...tweet.tags);
+//   return allTags;
+// }, []);
+// console.log(tags);
+const getTags = tweets => {
+  return tweets.reduce((allTags, tweet) => {
+    allTags.push(...tweet.tags);
+    return allTags;
+  }, []);
+};
+console.log('getTags:', getTags(tweets));
+
+const getTagsStats = (acc, tag) => {
+  if (!acc.hasOwnProperty(tag)) {
+    acc[tag] = 0;
+  }
+  acc[tag] += 1;
+  return acc;
+};
+console.log('getTagsStats: ', getTagsStats(tweets));
+const countTags = tags => tags.reduce(getTagsStats, {});
+const tagCount = countTags(tags);
+console.log(tagCount);
