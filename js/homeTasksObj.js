@@ -46,14 +46,18 @@ console.log(countLikes(tweets));
 //   allTags.push(...tweet.tags);
 //   return allTags;
 // }, []);
-// console.log(tags);
+// console.log('tags:', tags);
+
 const getTags = tweets => {
   return tweets.reduce((allTags, tweet) => {
     allTags.push(...tweet.tags);
     return allTags;
   }, []);
 };
-console.log('getTags:', getTags(tweets));
+console.log('getTags:', getTags(tweets)); // чому віддає андефайнд, якщо не має ретьорна перед твітс.ред'юс?
+// Тому що стоять дужки, тіло функції, явне повернення. А самого "повернення" і не має?
+const tags = getTags(tweets);
+console.log('const tags', tags);
 
 const getTagsStats = (acc, tag) => {
   if (!acc.hasOwnProperty(tag)) {
@@ -65,4 +69,4 @@ const getTagsStats = (acc, tag) => {
 console.log('getTagsStats: ', getTagsStats(tweets));
 const countTags = tags => tags.reduce(getTagsStats, {});
 const tagCount = countTags(tags);
-console.log(tagCount);
+// console.log(tagCount);
