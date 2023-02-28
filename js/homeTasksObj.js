@@ -1,8 +1,9 @@
-const numbers = [5, 10, 15, 20];
-
-numbers.forEach(
-  function (number) {
-    console.log(this.a);
-  },
-  { a: 'I am Groot' }
-);
+const showThis = () => {
+  console.log(this);
+};
+showThis();
+const user = {
+  name: 'mango',
+};
+user.showContext = showThis;
+user.showContext();
