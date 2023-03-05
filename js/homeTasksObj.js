@@ -1,26 +1,49 @@
-// ---------- constructor like a procedure programming
-// class User {
-//   constructor(name, email) {
-//     this.name = name;
-//     this.email = email;
-//   }
-// }
-// const mango = new User('Mango', 'mango@gmail.com');
-// console.log(mango);
-// const poly = new User('Poly', 'poly@yahoo.com');
-// console.log(poly);
-
-// ---------- constructor like a Object oriented programming
 class User {
-  constructor({ name, email }) {
-    this.name = name;
+  email;
+
+  constructor(email) {
     this.email = email;
   }
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
+  }
 }
-const mango = new User({
-  name: 'Mango',
-  email: 'mango@gmail.com',
+class Admin extends User {
+  // Change code below this line
+
+  static AccessLevel = {
+    BASIC: 'basic',
+    SUPERUSER: 'superuser',
+  };
+
+  constructor({ email, accessLevel }) {
+    super(email);
+    this.accessLevel = accessLevel;
+  }
+  blacklistedEmails = [];
+  blacklist(email) {
+    this.blacklistedEmails.push(email);
+  }
+  isBlcaklisted(email) {
+    return this.blacklistedEmails.includes(email);
+  }
+  // Change code above this line
+}
+
+const mango = new Admin({
+  email: 'mango@mail.com',
+  accessLevel: Admin.AccessLevel.SUPERUSER,
 });
-console.log(mango);
-const poly = new User({ name: 'Poly', email: 'poly@yahoo.eu' });
-console.log(poly);
+
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.accessLevel); // "superuser"
+
+mango.blacklist('poly@mail.com');
+console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+console.log(mango.isBlacklisted('mango@mail.com')); // false
+console.log(mango.isBlacklisted('poly@mail.com')); // true
